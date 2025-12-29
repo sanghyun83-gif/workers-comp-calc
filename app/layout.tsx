@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     "work injury calculator",
     "workers compensation benefits",
   ],
+  verification: {
+    google: "qlPMVO_Hb-be3_hFHNT9SBbsHO-b_wCOfWfLmTb4EQc",
+  },
   openGraph: {
     title: `${SITE.year} Workers Comp Calculator | All 50 States`,
     description: "Calculate workers compensation TTD benefits and settlement estimate. 2026 state maximum rates for all 50 states.",
