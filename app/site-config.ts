@@ -14,7 +14,7 @@ export const SITE = {
     tagline: "2026 State Maximum Rates Applied",
     description: "Calculate your workers compensation benefits for 2026. Free calculator with 50 state maximum rates, TTD calculation, and settlement estimator.",
     year: 2026,
-    baseUrl: "https://workers-comp-calc.vercel.app",
+    baseUrl: "https://workers-comp.mysmartcalculators.com",
 };
 
 // ============================================
@@ -164,7 +164,7 @@ export function calculateWorkersComp(
 ): WorkersCompResult {
     const state = STATE_WC_DATA[stateCode] || STATE_WC_DATA['CA'];
     const constants = WC_CONSTANTS_2026;
-    const bodyPartData = constants.bodyPartMultipliers[bodyPart as keyof typeof constants.bodyPartMultipliers] 
+    const bodyPartData = constants.bodyPartMultipliers[bodyPart as keyof typeof constants.bodyPartMultipliers]
         || constants.bodyPartMultipliers.other;
 
     // Calculate TTD (Temporary Total Disability) benefit
@@ -185,7 +185,7 @@ export function calculateWorkersComp(
     // Calculate settlement estimate based on body part
     const weeksOfBenefits = bodyPartData.weeks;
     const baseSettlement = weeklyBenefit * weeksOfBenefits * bodyPartData.multiplier;
-    
+
     // Apply variance for range
     const settlementLow = Math.round(baseSettlement * (1 - constants.settlementVariance));
     const settlementHigh = Math.round(baseSettlement * (1 + constants.settlementVariance));
