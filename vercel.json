@@ -1,0 +1,19 @@
+{
+  "redirects": [
+    {
+      "source": "/calculator",
+      "destination": "https://mysmartcalculators.com/workers-comp/calculator",
+      "permanent": true
+    },
+    {
+      "source": "/state-rates",
+      "destination": "https://mysmartcalculators.com/workers-comp/state-rates",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "destination": "https://mysmartcalculators.com/workers-comp",
+      "permanent": true
+    }
+  ]
+}
